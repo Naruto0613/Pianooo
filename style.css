@@ -16,3 +16,92 @@
     );
     --active-white-box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    background-color: var(--background);
+}
+
+#container {
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+}
+
+.piano {
+    background-color: var(--black);
+    padding: 35px 40px;
+    border-radius: 20px;
+    align-self: center;
+}
+
+header {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2 {
+    font-size: 1.6rem;
+}
+
+.piano-keys {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    list-style: none;
+}
+
+.key {
+    color: gray;
+    position: relative;
+}
+
+.white {
+    background: var(--white-linear-gradient);
+    width: 70px;
+    height: 230px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.black {
+    background: var(--black-linear-gradient);
+    width: 44px;
+    height: 140px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 0 -22px;
+    z-index: 2;
+}
+
+.key div {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 35px;
+    color: crimson;
+}
+
+.key span {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 7px;
+    text-transform: uppercase;
+}
+
+.white.active {
+    background: var(--active-white-linear-gradient);
+    box-shadow: var(--active-white-box-shadow);
+}
+
+.black.active {
+    background: var(--active-black-linear-gradient);
+    box-shadow: var(--active-black-box-shadow);
+}
